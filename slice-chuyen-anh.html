@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice chuyen anh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img class="main-img" id="slider"
+            src="https://raw.githubusercontent.com/ichte/Planets-Android-Learning/master/earth.jpg">
+        <img class="slice"
+            src="https://images.unsplash.com/photo-1645702435145-c59a6474e15e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+            onclick="prev()" alt="">
+        <img class="slice" src="https://raw.githubusercontent.com/ichte/Planets-Android-Learning/master/neptune.jpg"
+            onclick="next()" alt="">
+        <img class="slice"
+            src="https://images.unsplash.com/photo-1645699462725-f1ea49938ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60"
+            alt="" onclick="final()" srcset="">
+    </div>
+
+    <script>
+        var images = [
+            "https://images.unsplash.com/photo-1645702435145-c59a6474e15e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+            "https://raw.githubusercontent.com/ichte/Planets-Android-Learning/master/neptune.jpg",
+            "https://images.unsplash.com/photo-1645699462725-f1ea49938ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60"
+        ];
+
+        function next() {
+            var slider = document.getElementById("slider");
+            slider.src = images[1];
+        }
+
+        function prev() {
+            var slider = document.getElementById("slider");
+            slider.src = images[0];
+        }
+        function final() {
+            var slider = document.getElementById('slider');
+            slider.src = images[2]
+        }
+    </script>
+</body>
+
+</html>
